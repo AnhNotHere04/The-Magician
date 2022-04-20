@@ -1,3 +1,3 @@
 /// @description reset
 
-game_restart();
+SlideTrans(TRANS_MODE.RESTART);

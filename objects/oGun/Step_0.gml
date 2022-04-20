@@ -11,6 +11,7 @@ if (mouse_check_button(mb_left)) && (firingdelay < 0)
 {
 	recoil = 5;
 	firingdelay = 5;
+	ScreenShake(2,10);
 	with (instance_create_layer(x,y,"Bullets",oBullet))
 	{
 		speed = 25;

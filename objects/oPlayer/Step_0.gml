@@ -1,9 +1,20 @@
 /// @description Core Player Logic
 
 //Get Player inputs
-key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
-key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
-key_jump = keyboard_check_pressed(vk_space) || keyboard_check(ord("W"));
+if (hascontrol)
+{
+	key_right = keyboard_check(vk_right) || keyboard_check(ord("D"));
+	key_left = keyboard_check(vk_left) || keyboard_check(ord("A"));
+	key_jump = keyboard_check_pressed(vk_space) || keyboard_check(ord("W"));
+}
+else
+{
+	key_jump = 0;
+	key_left = 0;
+	key_right = 0;
+}
+
+
 
 //Caculate movement
 var _move = key_right - key_left;
